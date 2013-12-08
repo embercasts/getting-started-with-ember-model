@@ -11,9 +11,11 @@ App.IndexRoute = Ember.Route.extend({
 });
 
 App.IndexController = Ember.ArrayController.extend({
-  save: function() {
-    var newPerson = App.Person.create({name: this.get('newName')});
-    newPerson.save();
+  actions: {
+    save: function() {
+      var newPerson = App.Person.create({name: this.get('newName')});
+      newPerson.save();
+    }
   }
 });
 
